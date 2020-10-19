@@ -1,0 +1,45 @@
+body {
+	background-color:#10afff;
+}
+
+#content {
+	width: 320px;
+}
+
+#picture {
+	width: 95vw;
+	height: 80vh;
+}
+
+#output {
+	margin: 5px auto;
+	text-align: center;
+	font-family: lores-12, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 60px;
+}
+
+@media only screen and (orientation:portrait) {
+	body {
+		background-color: #7bd3ff;
+	}
+	#picture {
+		background: url(img/megaman.png) no-repeat fixed center;
+	}
+	#output:after {
+		content: 'STAGE START';
+	}
+}
+
+@media only screen and (orientation:landscape) {
+	body {
+		background-color: rgb(255, 131, 131);
+	}
+	#picture {
+		background: url(img/megaman-shoot.png) no-repeat fixed center;
+	}
+	#output:after {
+		content: 'CHARGE SHOT';
+	}
+}
