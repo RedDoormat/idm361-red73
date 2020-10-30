@@ -1,0 +1,31 @@
+CACHE MANIFEST
+# version - 1.0
+
+CACHE:
+
+# CSS
+css-normalize.css
+css-add2home.css
+css-main.css
+
+# IMAGES
+img\hades-stats_icon-57x57.png
+img\hades-stats_icon-72x72.png
+img\hades-stats_icon-76x76.png
+img\hades-stats_icon-114x114.png
+img\hades-stats_icon-144x144.png
+img\hades-stats_icon-152x152.png
+img\hades-stats_icon-180x180.png
+img\hades-stats_icon-256x256.png
+
+# HTML FILES
+index.html
+
+# JAVASCRIPT - SPECIFIC ORDER
+js-refresh-manifest.js
+js-add2home.js
+js-main.js
+
+## Any resources not listed above will require the user to be online.
+NETWORK:
+*

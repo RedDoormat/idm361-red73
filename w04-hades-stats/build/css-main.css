@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: rgb(88,0,0);
+	background: linear-gradient(0deg, rgba(88,0,0,1) 0%, rgba(47,0,0,1) 39%, rgba(20,0,0,1) 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: luminance, serif;
+}
+
+#title h1 {
+	color: rgb(255, 86, 86);
+	margin: .5rem auto;
+	text-align: center;
+}
+
+#inputs	{
+	color: rgb(243, 243, 243);
+	text-align: center;
+	margin: .5rem;
+}
+
+.number {
+	width: 4rem;
+}
+
+@media only screen and (orientation:portrait) {
+	html{
+		height: 100vh;
+	}
+}
+
+@media only screen and (orientation:landscape) {
+	html {
+		background: rgb(88,0,0);
+		background: linear-gradient(0deg, rgba(88,0,0,1) 0%, rgba(47,0,0,1) 39%, rgba(20,0,0,1) 100%);
+		font-family: luminance, serif;
+	}
+}
