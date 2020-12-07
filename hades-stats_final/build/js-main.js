@@ -6,14 +6,21 @@ var submitDamage = document.getElementById("damagesubmit");
 var submitCrit = document.getElementById("critsubmit");
 var submitDodge = document.getElementById("dodgesubmit");
 
+var subtractDamage = document.getElementById("damagesubtract");
+var subtractCrit = document.getElementById("critsubtract");
+var subtractDodge = document.getElementById("dodgesubtract");
+
 var resultDamage = document.getElementById("resultdamage");
 submitDamage.addEventListener("click", addDamage);
+subtractDamage.addEventListener("click", subtractdmg);
 
 var resultCrit = document.getElementById("resultcrit");
 submitCrit.addEventListener("click", addCrit);
+subtractCrit.addEventListener("click", subtractcrt);
 
 var resultDodge = document.getElementById("resultdodge");
 submitDodge.addEventListener("click", addDodge);
+subtractDodge.addEventListener("click", subtractdge);
 
 var buttonReset = document.getElementById("reset");
 buttonReset.addEventListener("click", resetValue);
@@ -69,6 +76,7 @@ function readData() {
     }
 }
 
+//Add Functions
 function addDamage() {
     var damage = parseFloat(inputDamage.value) || 0;
     totalDamage += damage;
@@ -91,6 +99,31 @@ function addDodge() {
     var dodgeChance = parseFloat(inputDodge.value) || 0;
     totalDodge += dodgeChance;
     // var dodgeChanceSum = totalDodge;
+    resultDodge.innerHTML= totalDodge + "%";
+    localStorage.redTotalDodge = totalDodge;
+    inputDodge.value = '';
+}
+
+//Subtract Functions
+function subtractdmg() {
+    var damage = parseFloat(inputDamage.value) || 0;
+    totalDamage -= damage;
+    resultDamage.innerHTML= totalDamage + "%";
+    localStorage.redTotalDamage = totalDamage;
+    inputDamage.value = '';
+}
+
+function subtractcrt() {
+    var critChance = parseFloat(inputCrit.value) || 0;
+    totalCrit -= critChance;
+    resultCrit.innerHTML= totalCrit + "%";
+    localStorage.redTotalCrit = totalCrit;
+    inputCrit.value = '';
+}
+
+function subtractdge() {
+    var dodgeChance = parseFloat(inputDodge.value) || 0;
+    totalDodge -= dodgeChance;
     resultDodge.innerHTML= totalDodge + "%";
     localStorage.redTotalDodge = totalDodge;
     inputDodge.value = '';
